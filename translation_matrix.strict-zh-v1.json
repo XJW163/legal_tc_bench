@@ -1,0 +1,59 @@
+{
+  "input": "data/annotated",
+  "output": "data/translations",
+  "defaults": {
+    "prompt_profile": "strict-zh-v1",
+    "temperature": 0,
+    "context_paragraphs": 0,
+    "max_tokens": 4096,
+    "source_chunk_chars": 12000,
+    "max_retries": 5,
+    "timeout_seconds": 300
+  },
+  "experiments": [
+    {
+      "name": "qwen3-8b-strict-zh-v1",
+      "model": "Qwen3-8B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "extra_body": {"chat_template_kwargs": {"enable_thinking": false}},
+      "enabled": true
+    },
+    {
+      "name": "qwen3-32b-strict-zh-v1",
+      "model": "Qwen3-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "extra_body": {"chat_template_kwargs": {"enable_thinking": false}},
+      "enabled": false
+    },
+    {
+      "name": "aya-expanse-8b-strict-zh-v1",
+      "model": "Aya-Expanse-8B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    },
+    {
+      "name": "aya-expanse-32b-strict-zh-v1",
+      "model": "Aya-Expanse-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    },
+    {
+      "name": "gpt-oss-20b-strict-zh-v1",
+      "model": "gpt-oss-20b",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    },
+    {
+      "name": "gpt-oss-120b-strict-zh-v1",
+      "model": "gpt-oss-120b",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    },
+    {
+      "name": "deepseek-r1-distill-32b-strict-zh-v1",
+      "model": "DeepSeek-R1-Distill-Qwen-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    }
+  ]
+}

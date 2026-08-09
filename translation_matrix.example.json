@@ -1,0 +1,34 @@
+{
+  "input": "data/annotated",
+  "output": "data/translations",
+  "defaults": {
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_retries": 5,
+    "timeout_seconds": 300,
+    "context_paragraphs": 0,
+    "prompt_profile": "baseline-v1",
+    "source_chunk_chars": 12000
+  },
+  "experiments": [
+    {
+      "name": "gpt-oss-120b-baseline",
+      "model": "gpt-oss-120b",
+      "base_url": "http://10.12.143.51:8000/v1"
+    },
+    {
+      "name": "qwen3-32b-baseline",
+      "model": "Qwen3-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "enabled": false
+    },
+    {
+      "name": "gpt-oss-120b-consistency-aware",
+      "model": "gpt-oss-120b",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "prompt_profile": "consistency-aware-v1",
+      "context_paragraphs": 2,
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# v1.6.0 patch summary
+
+- Upgraded the deterministic occurrence validator to `definition-use-rules-v2`.
+- Split the old broad `ADJACENT_CAPITALISED_MODIFIER -> SOFT` rule into explicit context classes.
+- Prevented compound extraction from crossing periods, colons, semicolons, commas, brackets, or line boundaries.
+- Kept core defined terms under HARD control when preceded by possessives or determiners:
+  - `Executive's Base Salary`
+  - `Your Sign-On Bonus`
+  - `Gilead's Board`
+- Kept acronyms and multiword terms HARD under conservative external modifiers such as `Annual LTIP` and `Existing LTIP`.
+- Excluded short-term spans that are components of complete job titles:
+  - `Chief Executive Officer`
+  - `Executive Vice President`
+- Excluded defined-term strings that are components of other legal instrument names:
+  - `Defend Trade Secrets Act`
+- Excluded aliases and generic heads when they occur inside complete entity or named expressions:
+  - `Gilead Sciences`
+  - `Tanger Properties`
+  - `Century Bank`
+  - `Savings Plan`
+- Kept entity aliases HARD when they modify an organisational relation noun:
+  - `Gilead Leadership`
+  - `Tanger Team`
+- Added `context_classification` to occurrence-validation artifacts and controlled-translation audit output.
+- Preserved genuinely ambiguous expressions such as `Sanctioned Person` as SOFT.
+- Added regression tests for all observed pilot failure modes.

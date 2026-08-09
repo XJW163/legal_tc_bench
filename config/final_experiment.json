@@ -1,0 +1,139 @@
+{
+  "project_root": ".",
+  "paths": {
+    "annotated": "data/annotated",
+    "term_memory": "data/term_memory_frozen_v1",
+    "occurrence_validation": "data/occurrences_validated_v161",
+    "baseline_root": "data/translations",
+    "controlled_root": "data/translations_controlled",
+    "reviews_root": "data/reviews_final",
+    "renderings_root": "data/renderings_final",
+    "renderings_validated_root": "data/renderings_validated_final",
+    "renderings_clean_root": "data/renderings_clean_final",
+    "aggregated_root": "data/aggregated_final",
+    "judgments_root": "data/judgments_final",
+    "final_metrics_root": "data/final_metrics_final",
+    "results_root": "data/final_results"
+  },
+  "translation_defaults": {
+    "temperature": 0.0,
+    "max_tokens": 4096,
+    "context_paragraphs": 2,
+    "max_context_chars": 12000,
+    "max_retries": 5,
+    "timeout_seconds": 600.0,
+    "workers": 2,
+    "continue_on_error": true,
+    "placeholder_repair_policy": "retry_then_fallback",
+    "placeholder_semantic_verifier": "retry",
+    "placeholder_repeat_rejection_limit": 2,
+    "semantic_verifier_retries": 2
+  },
+  "judge": {
+    "model": "gpt-oss-120b",
+    "base_url": "http://10.12.143.51:8000/v1",
+    "rendering_batch_size": 1,
+    "rendering_workers": 2,
+    "rendering_max_retries": 5,
+    "rendering_timeout_seconds": 300.0,
+    "repair_batch_size": 2,
+    "repair_max_retries": 5,
+    "repair_timeout_seconds": 300.0,
+    "consistency_batch_size": 5,
+    "consistency_confidence_threshold": 0.8,
+    "consistency_max_retries": 5,
+    "consistency_timeout_seconds": 300.0
+  },
+  "models": [
+    {
+      "key": "qwen3-8b",
+      "model": "Qwen3-8B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "qwen3-8b-zero-english-v1",
+        "qwen3-8b-strict-zh-v1"
+      ],
+      "request_extra_body": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "request_parameters": {}
+    },
+    {
+      "key": "qwen3-32b",
+      "model": "Qwen3-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "qwen3-32b-zero-english-v1",
+        "qwen3-32b-strict-zh-v1"
+      ],
+      "request_extra_body": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "request_parameters": {}
+    },
+    {
+      "key": "aya-expanse-8b",
+      "model": "Aya-Expanse-8B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "aya-expanse-8b-zero-english-v1",
+        "aya-expanse-8b-strict-zh-v1"
+      ],
+      "request_extra_body": null,
+      "request_parameters": {}
+    },
+    {
+      "key": "aya-expanse-32b",
+      "model": "Aya-Expanse-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "aya-expanse-32b-zero-english-v1",
+        "aya-expanse-32b-strict-zh-v1"
+      ],
+      "request_extra_body": null,
+      "request_parameters": {}
+    },
+    {
+      "key": "gpt-oss-20b",
+      "model": "gpt-oss-20b",
+      "base_url": "http://10.12.143.51:8001/v1",
+      "baseline_candidates": [
+        "gpt-oss-20b-zero-english-v1",
+        "gpt-oss-20b-strict-zh-v1"
+      ],
+      "request_extra_body": null,
+      "request_parameters": {
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "key": "gpt-oss-120b",
+      "model": "gpt-oss-120b",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "gpt-oss-120b-zero-english-v1",
+        "gpt-oss-120b-strict-zh-v1",
+        "gpt-oss-120b-baseline"
+      ],
+      "request_extra_body": null,
+      "request_parameters": {
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "key": "deepseek-r1-distill-32b",
+      "model": "DeepSeek-R1-Distill-Qwen-32B",
+      "base_url": "http://10.12.143.51:8000/v1",
+      "baseline_candidates": [
+        "deepseek-r1-distill-32b-zero-english-v1",
+        "deepseek-r1-distill-32b-strict-zh-v1"
+      ],
+      "request_extra_body": null,
+      "request_parameters": {}
+    }
+  ]
+}

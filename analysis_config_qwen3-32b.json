@@ -1,0 +1,40 @@
+{
+  "project_root": ".",
+  "paths": {
+    "annotated": "data/annotated",
+    "term_memory": "data/term_memory_frozen_v1",
+    "baseline": "data/translations/qwen3-32b-zero-english-v3",
+    "glossary": "data/translations_controlled/qwen3-32b-glossary-final",
+    "placeholder": "data/translations_controlled/qwen3-32b-placeholder-final",
+    "evaluation_root": "data/translation_evaluations",
+    "glossary_evaluation": "data/translation_evaluations/qwen3-32b-glossary-deepseek-v4-flash-lowcost",
+    "placeholder_evaluation": "data/translation_evaluations/qwen3-32b-placeholder-deepseek-v4-flash-lowcost",
+    "output_root": "data/analysis/qwen3-32b",
+    "occurrence_validation": "data/occurrences_validated_all"
+  },
+  "direct_ab": {
+    "term_sample_size": 500,
+    "non_term_sample_size": 200,
+    "seed": 2026,
+    "experiment": "gpt-oss-20b-glossary-vs-placeholder-direct-700"
+  },
+  "human_review": {
+    "sample_size": 200,
+    "term_fraction": 1,
+    "seed": 2026
+  },
+  "judge": {
+    "model": "deepseek-v4-flash",
+    "base_url": "https://api.deepseek.com",
+    "workers": 16,
+    "max_tokens": 1200,
+    "max_retries": 2,
+    "max_token_escalations": 1,
+    "timeout": 300,
+    "extra_body_json": "{\"thinking\":{\"type\":\"disabled\"}}"
+  },
+  "costs_cny": {
+    "glossary_judge_actual": 26.14,
+    "placeholder_judge_actual": null
+  }
+}

@@ -1,0 +1,2 @@
+# The standalone analysis scripts use only the Python standard library.
+# The project itself must already provide the `legal-tc` CLI and OpenAI client dependencies.

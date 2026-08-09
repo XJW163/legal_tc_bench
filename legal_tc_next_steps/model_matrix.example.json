@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "key": "gpt-oss-20b",
+      "enabled": false,
+      "baseline": "data/translations/gpt-oss-20b-zero-english-v2",
+      "glossary": "data/translations_controlled/gpt-oss-20b-glossary-final",
+      "placeholder": "data/translations_controlled/gpt-oss-20b-placeholder-final"
+    },
+    {
+      "key": "qwen3-8b",
+      "enabled": true,
+      "baseline": "data/translations/qwen3-8b-zero-english-v1",
+      "glossary": "data/translations_controlled/qwen3-8b-glossary-final",
+      "placeholder": "data/translations_controlled/qwen3-8b-placeholder-final"
+    },
+    {
+      "key": "qwen3-32b",
+      "enabled": true,
+      "baseline": "data/translations/qwen3-32b-zero-english-v1",
+      "glossary": "data/translations_controlled/qwen3-32b-glossary-final",
+      "placeholder": "data/translations_controlled/qwen3-32b-placeholder-final"
+    },
+    {
+      "key": "aya-expanse-8b",
+      "enabled": true,
+      "baseline": "data/translations/aya-expanse-8b-zero-english-v1",
+      "glossary": "data/translations_controlled/aya-expanse-8b-glossary-final",
+      "placeholder": "data/translations_controlled/aya-expanse-8b-placeholder-final"
+    },
+    {
+      "key": "aya-expanse-32b",
+      "enabled": true,
+      "baseline": "data/translations/aya-expanse-32b-zero-english-v1",
+      "glossary": "data/translations_controlled/aya-expanse-32b-glossary-final",
+      "placeholder": "data/translations_controlled/aya-expanse-32b-placeholder-final"
+    },
+    {
+      "key": "gpt-oss-120b",
+      "enabled": true,
+      "baseline": "data/translations/gpt-oss-120b-zero-english-v1",
+      "glossary": "data/translations_controlled/gpt-oss-120b-glossary-final",
+      "placeholder": "data/translations_controlled/gpt-oss-120b-placeholder-final"
+    },
+    {
+      "key": "deepseek-r1-distill-32b",
+      "enabled": true,
+      "baseline": "data/translations/deepseek-r1-distill-32b-zero-english-v1",
+      "glossary": "data/translations_controlled/deepseek-r1-distill-32b-glossary-final",
+      "placeholder": "data/translations_controlled/deepseek-r1-distill-32b-placeholder-final"
+    }
+  ]
+}

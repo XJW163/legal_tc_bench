@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment
+.venv/
+venv/
+
+# Data
+data/
+data_backup_before_rendering_cleanup/
+
+# Logs
+*.log
+nohup.out
+
+# Debug
+debug_*
+
+# Backup
+*.bak
+
+# Archive
+*.zip
+
+# Temporary copies
+* copy.*
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Model/cache
+models/
+checkpoints/
